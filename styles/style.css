@@ -116,7 +116,7 @@ section{
 /* mobile responsive design */
 @media screen and (max-width: 576px){
     .header{
-        margin: 20px;
+        margin: 10px;
     }
     .header nav ul .li_hide{
         display: none;
@@ -197,7 +197,11 @@ section{
 }
 /* mobile responsive design */
 @media screen and (max-width: 576px){
-
+    .companies{
+        width: 80%;
+        flex-wrap: wrap;
+        column-gap: 30px;
+    }
 }
 /* tablet responsive design */
 @media screen and (min-width: 577px) and (max-width: 992px){
