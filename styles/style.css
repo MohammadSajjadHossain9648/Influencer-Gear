@@ -185,7 +185,16 @@ section{
 
 
 /* companies section */
-
+.companies{
+    padding: 24px 42px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.companies img{
+    width: 70px;
+    height: 70px;
+}
 /* mobile responsive design */
 @media screen and (max-width: 576px){
 
