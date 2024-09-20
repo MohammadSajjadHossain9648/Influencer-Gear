@@ -292,7 +292,12 @@ section{
 
 /* mobile responsive design */
 @media screen and (max-width: 576px){
-
+    .collection{
+        padding: 0;
+    }
+    .collection .collection_container{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 /* tablet responsive design */
 @media screen and (min-width: 577px) and (max-width: 992px){
