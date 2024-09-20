@@ -301,7 +301,9 @@ section{
 }
 /* tablet responsive design */
 @media screen and (min-width: 577px) and (max-width: 992px){
-
+    .collection{
+        padding: 0;
+    }
 }
 
 
