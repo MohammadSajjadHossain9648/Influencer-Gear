@@ -9,6 +9,7 @@
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
+    max-width: 1280px;
 }
 :root{
     --primary-white-color: rgb(255, 255, 255);
