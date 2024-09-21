@@ -391,7 +391,7 @@ section{
 
 /* featured section */
 .featured{
-    padding: 80px 20px;
+    padding: 40px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -451,7 +451,23 @@ section{
 }
 /* tablet responsive design */
 @media screen and (min-width: 577px) and (max-width: 992px){
-
+    .featured{
+        padding: 40px 0;
+        gap: 60px;
+    }
+    .featured .featured_img_container{
+        width: 50%;
+    }
+    .featured .featured_img_container img{
+        height: 100%;
+        width: 100%;
+    }
+    .featured .featured_container{
+        width: 60%;
+    }
+    .featured .featured_container .featured_description{
+        width: 90%;
+    }
 }
 
 
