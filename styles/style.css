@@ -3,9 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-.manrope {
-    font-family: "Manrope", sans-serif;
-}
 
 /* common style */
 *{
@@ -26,7 +23,7 @@
     --product-description-color: rgb(120, 120, 133);
     --product-rating-color: rgb(94, 99, 102);
     --product-star-color: rgb(251, 130, 0);
-    --footer-icons-bg-color: rgb(170, 170, 170);
+    --footer-icons-bg-color: rgba(170, 170, 170, 0.1);
 }
 .btn{
     padding: 9px 21px;
@@ -489,6 +486,38 @@ section{
 
 
 /* footer section */
+.footer{
+    padding: 40px 120px;
+    background-color: var(--primary-blue-color);
+    color: var(--primary-white-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer .footer_title{
+    font-size: 1.32rem; /* 24px */
+}
+.footer .footer_copyright_info{
+    font-family: "Manrope", sans-serif;
+    font-size: 0.77rem; /* 14px */
+    padding-top: 5px;
+}
+.footer .footer_icons{
+    width: 15%;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.footer .footer_icons .footer_icons_box{
+    height: 20px;
+    width: 20px;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: var(--footer-icons-bg-color);
+    text-align: center;
+    cursor: pointer;
+}
 
 /* mobile responsive design */
 @media screen and (max-width: 576px){
