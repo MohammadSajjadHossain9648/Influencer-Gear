@@ -28,23 +28,23 @@
     --product-star-color: rgb(251, 130, 0);
 }
 .btn{
-    padding: 7px 16px;
+    padding: 9px 21px;
     color: var(--primary-white-color);
     background-color: var(--button-bg-color);
     border: none;
-    border-radius: 28px;
+    border-radius: 36px;
     display: flex;
     align-items: center;
     cursor: pointer;
 }
 .btn h1{
-    font-size: 0.67rem; /* 16px */
+    font-size: 0.88rem; /* 16px */
 }
 .btn img{
     padding-left: 10px;
 }
 section{
-    margin: 80px 160px;
+    margin: 40px 120px;
 }
 
 
@@ -58,7 +58,7 @@ section{
 /* header section */
 .header{
     color: var(--grey-color1);
-    margin: 40px 160px;
+    margin: 40px 120px;
 }
 .header nav{
     display: flex;
@@ -66,7 +66,7 @@ section{
     align-items: center;
 }
 .header nav .nav_title{
-    font-size: 1.005rem; /* 24px */
+    font-size: 1.32rem; /* 24px */
 }
 .header nav #check{
     display: none;
@@ -79,7 +79,7 @@ section{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 310px;
+    width: 400px;
 }
 .header nav ul li{
     list-style: none;
@@ -87,40 +87,43 @@ section{
 .header nav ul li a{
     text-decoration: none;
     color: var(--grey-color1);
-    font-size: 0.67rem; /* 16px */
+    font-size: 0.88rem; /* 16px */
 }
 .header nav .hide{
     display: none;
 }
 
 .header .banner{
-    margin: 34px 0;
+    margin: 44px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .header .banner .banner_container .banner_title{
-    font-size: 2.18rem; /* 52px */
+    font-size: 2.86rem; /* 52px */
 }
 .header .banner .banner_container .banner_description{
-    font-size: 0.67rem; /* 16px */
-    padding: 16px 0;
+    font-size: 0.88rem; /* 16px */
+    font-weight: 600;
+    padding: 14px 0;
     width: 70%;
 }
 .header .banner_img_container{
     background-image: url("../images/Circle-design.svg");
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
-    padding-right: 5px;
+    padding: 19px 15px;
 }
 .header .banner .banner_img_container img{
-    width: 400px;
-    height: 400px;
+    width: 380px;
+    height: 365px;
 }
 
 /* mobile responsive design */
 @media screen and (max-width: 576px){
     .header{
-        margin: 10px;
+        margin: 20px;
     }
     .header nav ul .li_hide{
         display: none;
@@ -137,7 +140,7 @@ section{
         position: fixed;
         top: 60px;
         left: -100%;
-        transition: all .50s ease;
+        transition: all .40s ease;
         backdrop-filter: blur(200px);
         flex-direction: column;
     }
@@ -156,26 +159,35 @@ section{
         width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
         text-align: center;
     }
+    .header .banner .banner_container .banner_title{
+        font-size: 1.54rem; /* 28px */
+    }
     .header .banner .banner_container .banner_description{
-        width: 100%;
+        width: 90%;
+        font-size: 0.77rem; /* 14px */
+        font-weight: 500;
+    }
+    .header .banner .banner_container .btn h1{
+        font-weight: 500;
+    }
+    .header .banner_img_container{
+        padding: 14px 12px;
     }
     .header .banner .banner_img_container img{
-        width: 300px;
-        height: 300px;
+        width: 177px;
+        height: 167px;
     }
 }
 /* tablet responsive design */
 @media screen and (min-width: 577px) and (max-width: 992px){
     .header{
-        margin: 60px 100px;
+        margin: 40px 80px;
     }
-    .header .banner .banner_img_container img{
-        width: 320px;
-        height: 320px;
+    .header .banner .banner_container .banner_title{
+        font-size: 2.2rem; /* 40px */
     }
 }
 
@@ -190,21 +202,48 @@ section{
 
 /* companies section */
 .companies{
-    padding: 24px 42px;
-    display: flex;
+    padding: 32px 55px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
     justify-content: space-around;
-    align-items: center;
 }
 .companies img{
     width: 70px;
-    height: 70px;
+    height: 35px;
+    align-self: center;
+    justify-self: center;
 }
+
 /* mobile responsive design */
 @media screen and (max-width: 576px){
     .companies{
-        width: 80%;
-        flex-wrap: wrap;
-        column-gap: 30px;
+        padding: 20px;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-areas: "item1 item1 item2 item2 item3 item3 item4 item4"
+                             "empty item5 item5 item6 item6 item7 item7 empty2";
+        gap: 20px;
+    }
+
+    .companies img:nth-child(1){
+        grid-area: item1;
+    }
+    .companies img:nth-child(2){
+        grid-area: item2;
+    }
+    .companies img:nth-child(3){
+        grid-area: item3;
+    }
+    .companies img:nth-child(4){
+        grid-area: item4;
+    }
+    .companies img:nth-child(5){
+        grid-area: item5;
+    }
+    .companies img:nth-child(6){
+        grid-area: item6;
+    }
+    .companies img:nth-child(7){
+        grid-area: item7;
     }
 }
 /* tablet responsive design */
@@ -223,22 +262,22 @@ section{
 
 /* collection section */
 .collection{
-    padding: 0 36px;
+    padding: 50px;
 }
 .collection .collection_title{
-    font-size: 1.17rem; /* 28px */
+    font-size: 1.54rem; /* 28px */
     font-weight: 600;
     color: var(--grey-color1);
     text-align: center;
 }
 .collection .collection_container{
-    margin: 22px 0;
+    margin: 26px 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 26px;
 }
 .collection .collection_container .collection_container_item{
-    padding: 12px 10px;
+    padding: 15px 13px;
     border-radius: 4px;
     box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
 }
@@ -250,13 +289,13 @@ section{
     padding: 10px 0;
 }
 .collection .collection_container .collection_container_item .collection_box .box_title{
-    font-size: 1.17rem; /* 28px */
+    font-size: 1.54rem; /* 28px */
     font-weight: 500;
     color: var(--product-title-color);
 }
 .collection .collection_container .collection_container_item .collection_box .box_price{
     font-family: "Inter", sans-serif;
-    font-size: 1.005rem; /* 24px */
+    font-size: 1.32rem; /* 24px */
     color: var(--product-price-color);
     padding: 8px 0;
 }
@@ -267,25 +306,30 @@ section{
 }
 .collection .collection_container .collection_container_item .collection_box .box_content i{
     color: var(--product-star-color);
-    font-size: 0.59rem; /* 14px */
+    font-size: 0.77rem; /* 14px */
 }
 .collection .collection_container .collection_container_item .collection_box .box_content .box_rating_content .box_rating{
     font-family: "Roboto", sans-serif;
-    font-size: 0.59rem; /* 14px */
+    font-size: 0.77rem; /* 14px */
     font-weight: 700;
     color: var(--product-rating-color);
     padding-left: 8px;
 }
 .collection .collection_container .collection_container_item .collection_box .box_description{
     font-family: "Inter", sans-serif;
-    font-size: 0.59rem; /* 14px */
+    font-size: 0.77rem; /* 14px */
     font-weight: 700;
     color: var(--product-description-color);
 }
 
-.collection .btn{
+.collection .collection_btn_container{
+    height: 80px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.collection .collection_btn_container .btn{
     padding: 0;
-    float: right;
     color: var(--button-text-color);
     background-color: var(--primary-white-color);
 }
@@ -293,16 +337,44 @@ section{
 /* mobile responsive design */
 @media screen and (max-width: 576px){
     .collection{
-        padding: 0;
+        padding: 20px 0;
     }
     .collection .collection_container{
         grid-template-columns: repeat(1, 1fr);
     }
+    .collection .collection_container .collection_container_item .collection_box .box_title{
+        font-weight: 700;
+    }
+    .collection .collection_container .collection_container_item .collection_box .box_price{
+        font-weight: 700;
+    }
+    .collection .collection_container .collection_container_item .collection_box .box_content .box_rating_content .box_rating{
+        font-weight: 500;
+    }
+    .collection .collection_container .collection_container_item .collection_box .box_description{
+        font-weight: 400;
+    }
 }
+
 /* tablet responsive design */
 @media screen and (min-width: 577px) and (max-width: 992px){
     .collection{
         padding: 0;
+    }
+    .collection .collection_container .collection_container_item .collection_box .box_title{
+        font-size: 1.21rem; /* 22px */
+    }
+    .collection .collection_container .collection_container_item .collection_box .box_price{
+        font-size: 0.99rem; /* 18px */
+    }
+    .collection .collection_container .collection_container_item .collection_box .box_content i{
+        font-size: 0.44rem; /* 8px */
+    }
+    .collection .collection_container .collection_container_item .collection_box .box_content .box_rating_content .box_rating{
+        font-size: 0.44rem; /* 8px */
+    }
+    .collection .collection_container .collection_container_item .collection_box .box_description{
+        font-size: 0.44rem; /* 8px */
     }
 }
 
@@ -319,39 +391,35 @@ section{
 
 /* featured section */
 .featured{
-    padding: 40px 0;
+    padding: 80px 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 200px;
+    justify-content: space-between;
+    gap: 160px;
 }
 .featured .featured_img_container{
     width: 40%;
 }
 .featured .featured_img_container img{
-    width: 100%;
-    height: 100%;
     border-radius: 4px;
-    padding-left: 20px;
 }
 .featured .featured_container{
-    width: 50%;
+    width: 60%;
 }
 .featured .featured_container .featured_title{
     font-size: 1.59rem; /* 38px */
     color: var(--primary-blue-color);
 }
 .featured .featured_container .featured_description{
-    font-size: 0.67rem; /* 16px */
+    font-size: 0.88rem; /* 16px */
     font-weight: 700;
     color: var(--grey-color2);
     width: 80%;
-    padding: 10px 0;
+    padding: 20px 0;
 }
 .featured .featured_container .btn{
     border-radius: 0;
 }
-
 /* mobile responsive design */
 @media screen and (max-width: 576px){
 
@@ -393,12 +461,12 @@ section{
 @media screen and (max-width: 576px){
     /* common style */
     section{
-        margin: 10px;
+        margin: 20px;
     }
 }
 /* tablet responsive design */
 @media screen and (min-width: 577px) and (max-width: 992px){
     section{
-        margin: 40px 100px;
+        margin: 40px 80px;
     }
 }
