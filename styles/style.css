@@ -26,6 +26,7 @@
     --product-description-color: rgb(120, 120, 133);
     --product-rating-color: rgb(94, 99, 102);
     --product-star-color: rgb(251, 130, 0);
+    --footer-icons-bg-color: rgb(170, 170, 170);
 }
 .btn{
     padding: 9px 21px;
@@ -487,6 +488,7 @@ section{
 
 
 
+/* footer section */
 
 /* mobile responsive design */
 @media screen and (max-width: 576px){
@@ -496,6 +498,15 @@ section{
 @media screen and (min-width: 577px) and (max-width: 992px){
 
 }
+
+
+
+
+
+
+
+
+
 
 
 /* mobile responsive design */
